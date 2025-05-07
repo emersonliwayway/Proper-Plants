@@ -4,7 +4,6 @@ import Plant from "./Plant";
 export default function Plants({ plants, addToCart }) {
   return (
     <>
-      <h2>Plants</h2>
       <div className="allPlants">
         {plants.map((plant) => (
           <Plant key={plant.id} plant={plant} addToCart={addToCart} />

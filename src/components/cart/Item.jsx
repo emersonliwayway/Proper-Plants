@@ -4,12 +4,14 @@
 export default function Item({ item, addToCart, removeFromCart }) {
   return (
     <>
-      <div key={item.id}>
+      <div key={item.id} className="itemDiv">
         <span>
-          {item.name}: {item.quantity}
+          {item.image} {item.name}
         </span>
-        <button onClick={() => addToCart(item)}>+</button>
-        <button onClick={() => removeFromCart(item)}>-</button>
+        <span className="quantity">
+          <button onClick={() => removeFromCart(item)}>-</button>
+          {item.quantity} <button onClick={() => addToCart(item)}>+</button>
+        </span>
       </div>
     </>
   );

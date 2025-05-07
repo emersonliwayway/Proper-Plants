@@ -42,8 +42,21 @@ export default function App() {
   // renders individual components to page
   return (
     <>
-      <Plants plants={PLANTS} addToCart={addToCart} />
-      <Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
+      <h1 className="title">Proper Plants</h1>
+      <div className="content">
+        <div className="plants">
+          <h2 className="title2">Plants</h2>
+          <Plants plants={PLANTS} addToCart={addToCart} />
+        </div>
+        <div className="cart">
+          <h2 className="title2">Cart</h2>
+          <Cart
+            cart={cart}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+          />
+        </div>
+      </div>
     </>
   );
 }
