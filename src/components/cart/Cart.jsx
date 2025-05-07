@@ -8,11 +8,13 @@ export default function Cart({ cart, addToCart, removeFromCart }) {
       <h2>Cart</h2>
       {cart.map((item) => {
         return (
-          <Item
-            item={item}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-          />
+          <div key={item.id}>
+            <Item
+              item={item}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          </div>
         );
       })}
     </>
